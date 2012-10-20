@@ -100,14 +100,14 @@ public class UsefullThings
                 new Object[] { "#g#", "###", "b#b",
                         'g', BuildCraftCore.goldGearItem,
                         'b', Block.blockSteel,
-                        '#', usefullthingsBlock
+                        '#', new ItemStack(usefullthingsBlock, 1 ,0)
         		});
-//        GameRegistry.addRecipe(new ItemStack(usefullthingsBlock, 1 ,2),
-//                new Object[] { "#g#", "###", "b#b",
-//                        'g', BuildCraftCore.goldGearItem,
-//                        'b', Block.blockSteel,
-//                        '#', "tile.cobblegen.1"
-//        		});
+        GameRegistry.addRecipe(new ItemStack(usefullthingsBlock, 1 ,2),
+                new Object[] { "#g#", "###", "b#b",
+                        'g', BuildCraftCore.goldGearItem,
+                        'b', Block.blockSteel,
+                        '#', new ItemStack(usefullthingsBlock, 1 ,1)
+        		});
         GameRegistry.addRecipe(new ItemStack(luminolampBlock, 1),
                 new Object[] { " b ", "rrr", " g ",
                         'g', Block.glass,
