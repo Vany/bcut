@@ -30,9 +30,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import bcut.PacketHandler;
 
-@Mod(name = "BuildCraft UsefullThings", version = "0.0.3", useMetadata = false, modid = "UsefullThings")
+@Mod(name = "BuildCraft UsefullThings", version = "0.0.4", useMetadata = false, modid = "UsefullThings")
 @NetworkMod(channels = {"bcut"} 
-	,versionBounds = "[0.0.3,)" 
+	,versionBounds = "[0.0,)" 
 	,clientSideRequired = true 
 	,serverSideRequired = false 
 	//,packetHandler = PacketHandler.class

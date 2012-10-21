@@ -23,13 +23,14 @@ public abstract class TileGenericCobblegen extends TileUsefullThings implements 
 	
 	void init() {
 		powerProvider = PowerFramework.currentFramework.createPowerProvider();
-		powerProvider.configure(20, 1, efficiency, MjPerItem, efficiency*MjPerItem);
+		powerProvider.configure(0, 1, efficiency+1, MjPerItem, efficiency*MjPerItem);
 	}
 
 
 	@Override
 	public void doWork() {
-		int  e=(int)(powerProvider.getEnergyStored());
+		if (worldObj.getWorldTime() % 20 >0) return;
+		int e = (int)(powerProvider.getEnergyStored());
 		if (e<MjPerItem) return;
 		int count = e/MjPerItem;
 		if (count>efficiency) count = efficiency;
@@ -57,7 +58,7 @@ public abstract class TileGenericCobblegen extends TileUsefullThings implements 
 	
 	@Override
 	public int powerRequest() {
-		return efficiency;
+		return powerProvider.getEnergyStored() > efficiency*MjPerItem ? 0 : efficiency; 
 	}
 
 	@Override

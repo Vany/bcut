@@ -27,7 +27,12 @@ public class BlockLuminolamp extends Block {
 		return "/gfx/usefullthings.png";
 	}
 
-	
+
+	// like a blockglass
+    public int getRenderBlockPass() {
+        return 0;
+    }
+
 	@Override
 	public int getBlockTextureFromSide(int side){
 		return side < 2 ? 6 : 7;
