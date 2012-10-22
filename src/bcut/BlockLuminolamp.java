@@ -27,7 +27,6 @@ public class BlockLuminolamp extends Block {
 		return "/gfx/usefullthings.png";
 	}
 
-
 	// like a blockglass
     public int getRenderBlockPass() {
         return 0;
